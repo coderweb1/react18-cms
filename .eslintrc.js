@@ -21,6 +21,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'import/order': 'off',
     'import/prefer-default-export': 'off',
-    'import/newline-after-import': 'off'
+    'import/newline-after-import': 'off',
+    'react/button-has-type': 'off'
   }
 }

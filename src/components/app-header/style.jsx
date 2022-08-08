@@ -33,7 +33,9 @@ export const HeaderLeft = styled.div`
   .select-list {
     display: flex;
     line-height: 70px;
-
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
     .select-item {
       position: relative;
       a {
@@ -65,7 +67,8 @@ export const HeaderLeft = styled.div`
 
       .active .icon {
         position: absolute;
-        display: inline-block;
+        /* display: block; */
+        /* display: inline-block; */
         width: 12px;
         height: 7px;
         bottom: -1px;
