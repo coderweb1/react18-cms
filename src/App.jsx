@@ -1,17 +1,25 @@
-import React, { memo } from 'react'
+import React, { memo } from 'react';
+import { Provider } from 'react-redux';
 
-import { Outlet } from './router'
+import { Routerview } from './router';
 
-import { HashRouter as Router } from 'react-router-dom'
-import WSAppHeader from '@/components/app-header'
-import WsAppFooter from '@/components/app-footer'
+import store from './store';
 
-export default memo(function App() {
-  return (
-    <Router>
-      <WSAppHeader />
-      <Outlet />
-      <WsAppFooter />
-    </Router>
-  )
-})
+import { HashRouter as Router } from 'react-router-dom';
+
+import zhCN from 'antd/es/locale/zh_CN';
+import { ConfigProvider } from 'antd';
+
+const App = memo(() => {
+	return (
+		<Provider store={store}>
+			<ConfigProvider locale={zhCN}>
+				<Router>
+					<Routerview />
+				</Router>
+			</ConfigProvider>
+		</Provider>
+	);
+});
+
+export default App;

@@ -1,6 +1,6 @@
-import { useRoutes } from 'react-router-dom'
-import routes from './routes'
+import { useRoutes } from 'react-router-dom';
+import routes from './routes';
 
-export const Outlet = () => useRoutes(routes)
+export const Routerview = () => useRoutes(routes);
 
 // export { Outlet }
